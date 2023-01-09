@@ -9,4 +9,5 @@ import UIKit
 
 class TrendScreenView: UIView {
     
+    @IBOutlet weak var collection: UICollectionView?
 }
