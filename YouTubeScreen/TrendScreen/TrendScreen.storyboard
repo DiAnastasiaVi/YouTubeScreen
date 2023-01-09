@@ -18,20 +18,29 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="aK6-Oc-KUM">
                                 <rect key="frame" x="0.0" y="44" width="414" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="       PREMIUM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrE-C8-FK8">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krl-M3-K7h">
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="6av-0P-HD2"/>
+                                            <constraint firstAttribute="width" constant="136" id="D2c-Up-fPB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillProportionally" alignment="lastBaseline" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-SR-hxp">
-                                        <rect key="frame" x="201" y="0.0" width="213" height="31"/>
+                                        <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="youtube">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content=" Premium">
+                                                    <attributes>
+                                                        <font key="NSFont" size="20" name="BigCaslon-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-SR-hxp">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-fM-tcm">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="airplayvideo" catalog="system">
@@ -39,21 +48,21 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1om-bl-xpH">
-                                                <rect key="frame" x="56" y="0.0" width="54" height="31"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="50" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="video.fill" catalog="system">
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-yc-A7n">
-                                                <rect key="frame" x="112" y="0.0" width="49.5" height="31"/>
+                                                <rect key="frame" x="104.5" y="0.0" width="50.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uH-vI-jDo">
-                                                <rect key="frame" x="163.5" y="0.0" width="49.5" height="31"/>
+                                                <rect key="frame" x="157" y="0.0" width="50" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system">
                                                     <color key="baseForegroundColor" red="0.77976076689999996" green="0.1344040651" blue="0.095554192189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,5 +115,6 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="rectangle.stack.badge.play.fill" catalog="system" width="128" height="117"/>
         <image name="video.fill" catalog="system" width="128" height="82"/>
+        <image name="youtube" width="30" height="30"/>
     </resources>
 </document>
