@@ -6,5 +6,6 @@ target 'YouTubeScreen' do
   use_frameworks!
 
   pod 'UnsplashPhotoPicker', '~> 1.3'
+  pod 'PinLayout'
 
 end

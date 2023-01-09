@@ -1,16 +1,20 @@
 PODS:
+  - PinLayout (1.10.2)
   - UnsplashPhotoPicker (1.3.0)
 
 DEPENDENCIES:
+  - PinLayout
   - UnsplashPhotoPicker (~> 1.3)
 
 SPEC REPOS:
   trunk:
+    - PinLayout
     - UnsplashPhotoPicker
 
 SPEC CHECKSUMS:
+  PinLayout: d6b1960e4b182b4da1481b9aa6728f621e20708d
   UnsplashPhotoPicker: 327eef7ccbb4c322ed13360fdda6e975d1bea61d
 
-PODFILE CHECKSUM: 172a2898eb1d3b4058bb7c3c249b734b92f7d3a6
+PODFILE CHECKSUM: c0e72a03566d6fa5ee6753b6653ff7d15ac4a72d
 
 COCOAPODS: 1.11.2

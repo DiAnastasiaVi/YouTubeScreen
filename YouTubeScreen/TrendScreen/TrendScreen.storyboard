@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-yh-2Mc">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                                 <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="Home" image="house.fill" catalog="system" id="Bqg-0q-FzN">
@@ -63,10 +63,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bvq-XW-Z3O">
-                                        <rect key="frame" x="214.5" y="0.5" width="199.5" height="34"/>
+                                        <rect key="frame" x="214.5" y="0.0" width="199.5" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-fM-tcm">
-                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.5" width="42.5" height="34"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -76,7 +76,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1om-bl-xpH">
-                                                <rect key="frame" x="52.5" y="0.0" width="42.5" height="34"/>
+                                                <rect key="frame" x="52.5" y="0.5" width="42.5" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <imageReference key="image" image="video.fill" catalog="system" symbolScale="default"/>
@@ -85,7 +85,7 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-yc-A7n">
-                                                <rect key="frame" x="105" y="0.0" width="42" height="34"/>
+                                                <rect key="frame" x="105" y="0.5" width="42" height="34"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="default"/>
@@ -94,11 +94,11 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uH-vI-jDo">
-                                                <rect key="frame" x="157" y="0.0" width="42.5" height="34"/>
+                                                <rect key="frame" x="157" y="0.0" width="42.5" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="default"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
+                                                    <imageReference key="image" image="1resized" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15" scale="small"/>
                                                     <color key="baseForegroundColor" red="0.77976076689999996" green="0.1344040651" blue="0.095554192189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -252,7 +252,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="WuI-dC-5A5"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xnA-Z7-MiW">
-                                <rect key="frame" x="0.0" y="160" width="414" height="653"/>
+                                <rect key="frame" x="0.0" y="160" width="414" height="619"/>
                                 <color key="backgroundColor" red="0.12939515709999999" green="0.1294237375" blue="0.12938910719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lCr-7P-CS8">
                                     <size key="itemSize" width="128" height="128"/>
@@ -293,8 +293,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1resized" width="25" height="25"/>
         <image name="airplayvideo" catalog="system" width="128" height="98"/>
-        <image name="circle.inset.filled" catalog="system" width="128" height="121"/>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="flame.fill" catalog="system" width="108" height="128"/>

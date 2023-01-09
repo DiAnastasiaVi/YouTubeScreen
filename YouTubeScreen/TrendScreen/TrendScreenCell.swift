@@ -6,38 +6,24 @@
 //
 
 import UIKit
+import PinLayout
 
 class TrendScreenCell: UICollectionViewCell {
     
     internal var cellId = "cell"
     
     private var videoImage: UIImageView = {
-        let image = UIImageView(frame: CGRect.zero)
-        image.translatesAutoresizingMaskIntoConstraints = false
+        let image = UIImageView()
+        image.backgroundColor = .blue
         return image
     }()
-    private var nameLabel: UILabel = {
-        let label = UILabel(frame: CGRect.zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    private var authorLabel: UILabel = {
-        let label = UILabel(frame: CGRect.zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    private var videoButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
     
-    
-    private func setConstraints() {
-        let safeArea = safeAreaLayoutGuide
-        videoImage.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+    override func layoutSubviews() {
+        videoImage.pin
+            .top(pin.safeArea)
+            .left(pin.safeArea)
+            .right(pin.safeArea)
+            .bottom(pin.safeArea)
     }
-    
-    
     
 }
