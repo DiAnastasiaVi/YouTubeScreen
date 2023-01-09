@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -15,11 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-yh-2Mc">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <tabBarItem title="Home" image="house.fill" catalog="system" id="Bqg-0q-FzN">
+                                        <color key="badgeColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Trending" image="flame.fill" catalog="system" id="4UV-GO-0YV"/>
+                                    <tabBarItem title="Subscriptions" image="rectangle.stack.badge.play.fill" catalog="system" id="bue-eW-Nhb">
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="-9" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Inbox" image="envelope.fill" catalog="system" id="3PR-dh-8jq"/>
+                                    <tabBarItem title="Library" image="folder.fill" catalog="system" id="naa-E7-gPf"/>
+                                </items>
+                                <color key="barTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="selectedImageTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="aK6-Oc-KUM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krl-M3-K7h">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="136" id="D2c-Up-fPB"/>
                                         </constraints>
@@ -37,10 +55,10 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-SR-hxp">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="31"/>
+                                        <rect key="frame" x="207" y="0.0" width="207" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-fM-tcm">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="4.5" width="50.5" height="31"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="airplayvideo" catalog="system">
@@ -48,21 +66,21 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1om-bl-xpH">
-                                                <rect key="frame" x="52.5" y="0.0" width="50" height="31"/>
+                                                <rect key="frame" x="52.5" y="4.5" width="50" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="video.fill" catalog="system">
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-yc-A7n">
-                                                <rect key="frame" x="104.5" y="0.0" width="50.5" height="31"/>
+                                                <rect key="frame" x="104.5" y="4.5" width="50.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uH-vI-jDo">
-                                                <rect key="frame" x="157" y="0.0" width="50" height="31"/>
+                                                <rect key="frame" x="157" y="4.5" width="50" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system">
                                                     <color key="baseForegroundColor" red="0.77976076689999996" green="0.1344040651" blue="0.095554192189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,23 +90,10 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="aKt-oH-W8q"/>
+                                </constraints>
                             </stackView>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-yh-2Mc">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <tabBarItem title="Home" image="house.fill" catalog="system" id="Bqg-0q-FzN">
-                                        <color key="badgeColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Trending" image="flame.fill" catalog="system" id="4UV-GO-0YV"/>
-                                    <tabBarItem title="Subscriptions" image="rectangle.stack.badge.play.fill" catalog="system" id="bue-eW-Nhb"/>
-                                    <tabBarItem title="Inbox" image="envelope.fill" catalog="system" id="3PR-dh-8jq"/>
-                                    <tabBarItem title="Library" image="folder.fill" catalog="system" id="naa-E7-gPf"/>
-                                </items>
-                                <color key="barTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="selectedImageTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.12939515709999999" green="0.1294237375" blue="0.12938910719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

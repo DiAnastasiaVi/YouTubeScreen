@@ -13,6 +13,9 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     //MARK: Properties
     
     //тут буде моделька
+    private var mainView: TrendScreenView? {
+        return self.view as? TrendScreenView
+    }
     
     //MARK: -
     //MARK: Init and Deinit
@@ -24,6 +27,7 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainView?.backgroundColor = .red
     }
     
     deinit {
