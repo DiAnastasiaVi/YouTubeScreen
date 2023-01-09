@@ -11,6 +11,11 @@ class TrendScreenCell: UICollectionViewCell {
     
     internal var cellId = "cell"
     
+    private var videoImage: UIImageView = {
+        let image = UIImageView(frame: CGRect.zero)
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
     private var nameLabel: UILabel = {
         let label = UILabel(frame: CGRect.zero)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -28,7 +33,10 @@ class TrendScreenCell: UICollectionViewCell {
     }()
     
     
-    
+    private func setConstraints() {
+        let safeArea = safeAreaLayoutGuide
+        videoImage.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+    }
     
     
     

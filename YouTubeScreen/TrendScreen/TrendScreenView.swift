@@ -27,14 +27,16 @@ class TrendScreenView: UIView {
     private func videoCollectionSetup() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        guard let widthCell = videoCollection?.frame.width else { return }
+        guard let heightCell = videoCollection?.frame.height else { return }
+        layout.itemSize = CGSize(width: widthCell, height: heightCell / 2.5)
+        
         
         videoCollection?.collectionViewLayout = layout
         videoCollection?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        videoCollection?.backgroundColor = .red
     }
     
     private func videoCollectionConstreints() {
-        
     }
     
     
