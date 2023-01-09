@@ -24,6 +24,8 @@ class TrendScreenCell: UICollectionViewCell {
             .left(pin.safeArea)
             .right(pin.safeArea)
             .bottom(pin.safeArea)
+        self.backgroundColor = .brown
+        self.addSubview(videoImage)
     }
     
 }

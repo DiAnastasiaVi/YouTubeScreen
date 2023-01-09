@@ -16,7 +16,7 @@ extension TrendScreenViewController: UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? TrendScreenCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .green
+        
         return cell
     }
 }
