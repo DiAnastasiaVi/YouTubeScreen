@@ -7,11 +7,16 @@
 
 import UIKit
 
+enum TrendScreenEvents {
+    case something
+}
+
 class TrendScreenViewController: UIViewController, StoryboardLoadable {
     
     //MARK: -
     //MARK: Properties
     
+    public var eventHandler: ((TrendScreenEvents) -> Void)?
     //тут буде моделька
     private var mainView: TrendScreenView? {
         return self.view as? TrendScreenView
@@ -27,7 +32,6 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mainView?.backgroundColor = .red
     }
     
     deinit {

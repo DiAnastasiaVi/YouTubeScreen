@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-yh-2Mc">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPG-yh-2Mc">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <tabBarItem title="Home" image="house.fill" catalog="system" id="Bqg-0q-FzN">
@@ -33,56 +33,64 @@
                                 <color key="barTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="selectedImageTintColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tabBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="aK6-Oc-KUM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OCq-61-VSE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krl-M3-K7h">
-                                        <rect key="frame" x="0.0" y="0.0" width="136" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="136" id="D2c-Up-fPB"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="youtube">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=" Premium">
-                                                    <attributes>
-                                                        <font key="NSFont" size="20" name="BigCaslon-Medium"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-SR-hxp">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                    <stackView opaque="NO" contentMode="right" distribution="fillProportionally" alignment="center" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="TLc-uS-UOu">
+                                        <rect key="frame" x="0.0" y="2.5" width="199.5" height="30"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-5O-JXm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="QG3-KJ-3En"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14" scale="small"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-hG-3ys">
+                                                <rect key="frame" x="46" y="4.5" width="153.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bvq-XW-Z3O">
+                                        <rect key="frame" x="214.5" y="0.5" width="199.5" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-fM-tcm">
-                                                <rect key="frame" x="0.0" y="4.5" width="50.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42.5" height="34"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="airplayvideo" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="airplayvideo" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1om-bl-xpH">
-                                                <rect key="frame" x="52.5" y="4.5" width="50" height="31"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="42.5" height="34"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="video.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="video.fill" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-yc-A7n">
-                                                <rect key="frame" x="104.5" y="4.5" width="50.5" height="31"/>
+                                                <rect key="frame" x="105" y="0.0" width="42" height="34"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                     <color key="baseForegroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uH-vI-jDo">
-                                                <rect key="frame" x="157" y="4.5" width="50" height="31"/>
+                                                <rect key="frame" x="157" y="0.0" width="42.5" height="34"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="circle.inset.filled" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="circle.inset.filled" catalog="system" symbolScale="default"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                     <color key="baseForegroundColor" red="0.77976076689999996" green="0.1344040651" blue="0.095554192189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -91,19 +99,21 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.15684366229999999" green="0.15687647460000001" blue="0.15683668849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="aKt-oH-W8q"/>
+                                    <constraint firstAttribute="height" constant="35" id="8MZ-PH-kwG"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.12939515709999999" green="0.1294237375" blue="0.12938910719999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aK6-Oc-KUM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Dhh-hg-7aG"/>
-                            <constraint firstItem="aK6-Oc-KUM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Ftw-JS-aAp"/>
-                            <constraint firstAttribute="trailing" secondItem="aK6-Oc-KUM" secondAttribute="trailing" id="xna-iI-jkH"/>
+                            <constraint firstItem="OCq-61-VSE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="7cP-Ef-Z2E"/>
+                            <constraint firstItem="OCq-61-VSE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jjc-JD-68A"/>
+                            <constraint firstItem="mPG-yh-2Mc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L84-62-Uxf"/>
+                            <constraint firstItem="mPG-yh-2Mc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cES-Sb-mgW"/>
+                            <constraint firstItem="mPG-yh-2Mc" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="ePc-II-SaQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OCq-61-VSE" secondAttribute="trailing" id="isq-tb-Xb7"/>
                         </constraints>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
