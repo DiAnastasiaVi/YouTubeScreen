@@ -32,6 +32,9 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainView?.commonSetup()
+        self.mainView?.videoCollection?.delegate = self
+        self.mainView?.videoCollection?.dataSource = self
     }
     
     deinit {

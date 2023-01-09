@@ -18,6 +18,8 @@
 		5DB8FF3B296C2B620032D6EB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3A296C2B620032D6EB /* Coordinator.swift */; };
 		5DB8FF3D296C2B730032D6EB /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3C296C2B730032D6EB /* AppConfigurator.swift */; };
 		5DB8FF3F296C2B8A0032D6EB /* ScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3E296C2B8A0032D6EB /* ScreensCoordinator.swift */; };
+		5DDBDC27296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */; };
+		5DDBDC29296CB25D00C80A41 /* TrendScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDBDC28296CB25D00C80A41 /* TrendScreenCell.swift */; };
 		A2F421CD70F723BA6DCC80A7 /* Pods_YouTubeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BA6AA5EE0D51FD2CE63456 /* Pods_YouTubeScreen.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,8 @@
 		5DB8FF3A296C2B620032D6EB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5DB8FF3C296C2B730032D6EB /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		5DB8FF3E296C2B8A0032D6EB /* ScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensCoordinator.swift; sourceTree = "<group>"; };
+		5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrandScreenViewControllerExtension.swift; sourceTree = "<group>"; };
+		5DDBDC28296CB25D00C80A41 /* TrendScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendScreenCell.swift; sourceTree = "<group>"; };
 		5E8ECDB878AC0B74CB12C4A0 /* Pods-YouTubeScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeScreen.debug.xcconfig"; path = "Target Support Files/Pods-YouTubeScreen/Pods-YouTubeScreen.debug.xcconfig"; sourceTree = "<group>"; };
 		9FEBC4A7B8C66BFC88A3C55C /* Pods-YouTubeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeScreen.release.xcconfig"; path = "Target Support Files/Pods-YouTubeScreen/Pods-YouTubeScreen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +93,9 @@
 			children = (
 				5DB8FF31296C297E0032D6EB /* TrendScreen.storyboard */,
 				5DB8FF33296C299A0032D6EB /* TrendScreenViewController.swift */,
+				5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */,
 				5DB8FF35296C29B60032D6EB /* TrendScreenView.swift */,
+				5DDBDC28296CB25D00C80A41 /* TrendScreenCell.swift */,
 			);
 			path = TrendScreen;
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 				5DB8FF3B296C2B620032D6EB /* Coordinator.swift in Sources */,
 				5DB8FF1D296C21850032D6EB /* AppDelegate.swift in Sources */,
 				5DB8FF1F296C21850032D6EB /* SceneDelegate.swift in Sources */,
+				5DDBDC29296CB25D00C80A41 /* TrendScreenCell.swift in Sources */,
 				5DB8FF34296C299A0032D6EB /* TrendScreenViewController.swift in Sources */,
+				5DDBDC27296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
