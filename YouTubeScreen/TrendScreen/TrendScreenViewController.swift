@@ -17,7 +17,7 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     //MARK: Properties
     
     public var eventHandler: ((TrendScreenEvents) -> Void)?
-    //тут буде моделька
+    public var model = TrendScreenModel()
     private var mainView: TrendScreenView? {
         return self.view as? TrendScreenView
     }

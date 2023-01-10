@@ -11,12 +11,12 @@ import UIKit
 extension TrendScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return model.videoData.map{$0.id}.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? TrendScreenCell else { return UICollectionViewCell() }
-        
+        cell.setData(model.videoData[indexPath.row])
         return cell
     }
 }

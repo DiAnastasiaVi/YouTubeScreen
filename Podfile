@@ -7,5 +7,6 @@ target 'YouTubeScreen' do
 
   pod 'UnsplashPhotoPicker', '~> 1.3'
   pod 'PinLayout'
+  pod 'Alamofire'
 
 end
