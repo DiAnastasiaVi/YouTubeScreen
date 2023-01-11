@@ -33,7 +33,7 @@ class TrendScreenModel {
 
 struct ImageData: Codable {
     let user: String
-    let createdAt: Date
+    let createdAt: String
     let altDescription: String
     let likes: Int
     let link: String

@@ -18,14 +18,12 @@ class NetworkManager {
         
         let request = AF.request(jsonURL, method: HTTPMethod.get, parameters: nil, encoding: URLEncoding.default, headers: HTTPHeaders.default)
         
-        request.validate().responseDecodable(of: Unsplash.self) { response in
+        request.validate().responseDecodable(of: Array<UnsplashElement>.self) { response in
             switch response.result {
             case .success(let data):
-                completion(data.compactMap{
-//                    let url = URL(string: $0.links.html)
-                    return ImageData(user: $0.user.name, createdAt: $0.createdAt, altDescription: $0.altDescription, likes: $0.likes, link: $0.links.html)
+                completion(data.compactMap {
+                    return ImageData(user: $0.user.username ?? "", createdAt: $0.createdAt ?? "", altDescription: $0.altDescription ?? "", likes: $0.likes ?? 1, link: $0.links.html ?? "")
                 })
-                print(data)
             case .failure(let error):
                 if response.data == nil {
                     onFailure(CustomError.noInternetConnection)

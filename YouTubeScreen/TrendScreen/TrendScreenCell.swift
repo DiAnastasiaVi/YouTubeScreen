@@ -21,17 +21,18 @@ class TrendScreenCell: UICollectionViewCell {
     }()
     
     public func setData(_ data: ImageData) {
+        self.contentView.addSubview(videoImage)
         guard let url = URL(string: data.link) else { return }
         videoImage.load(url: url)
     }
     
     override func layoutSubviews() {
+        
         videoImage.pin
             .top(pin.safeArea)
-            .left(pin.safeArea)
+            .left(pin.safeArea).margin(10)
             .right(pin.safeArea)
-            .bottom(pin.safeArea)
-        self.contentView.addSubview(videoImage)
+            .bottom(pin.safeArea).margin(10)
         self.backgroundColor = .brown
     }
 }
