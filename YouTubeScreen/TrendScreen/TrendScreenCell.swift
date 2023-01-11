@@ -15,13 +15,13 @@ class TrendScreenCell: UICollectionViewCell {
     internal var model = TrendScreenModel()
     internal var videoImage: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .scaleToFill
         image.backgroundColor = .blue
         return image
     }()
     
     public func setData(_ data: ImageData) {
-        self.addSubview(videoImage)
-        let url = data.urls
+        guard let url = URL(string: data.link) else { return }
         videoImage.load(url: url)
     }
     
@@ -31,6 +31,7 @@ class TrendScreenCell: UICollectionViewCell {
             .left(pin.safeArea)
             .right(pin.safeArea)
             .bottom(pin.safeArea)
+        self.contentView.addSubview(videoImage)
         self.backgroundColor = .brown
     }
 }

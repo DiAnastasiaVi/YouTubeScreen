@@ -11,7 +11,7 @@ import UIKit
 extension TrendScreenViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return model.videoData.map{$0.id}.count 
+        return model.videoData.map{$0.user}.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

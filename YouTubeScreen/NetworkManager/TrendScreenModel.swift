@@ -32,9 +32,9 @@ class TrendScreenModel {
 }
 
 struct ImageData: Codable {
-   let id: String
-   let width: Int
-   let height: Int
-   let color: String
-   let urls: URL 
+    let user: String
+    let createdAt: Date
+    let altDescription: String
+    let likes: Int
+    let link: String
 }

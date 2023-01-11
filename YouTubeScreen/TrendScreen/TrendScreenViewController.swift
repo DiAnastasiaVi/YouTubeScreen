@@ -8,7 +8,7 @@
 import UIKit
 
 enum TrendScreenEvents {
-    case something
+    case loadData
 }
 
 class TrendScreenViewController: UIViewController, StoryboardLoadable {
@@ -35,11 +35,47 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
         self.mainView?.commonSetup()
         self.mainView?.videoCollection?.delegate = self
         self.mainView?.videoCollection?.dataSource = self
+        loadData("")
     }
     
     deinit {
         print("Deinit: \(Self.self)")
     }
+    
+    
+    //MARK: -
+    //MARK: Private Methods
+    
+    private func showError(err: String) {
+        let alert = UIAlertController(title: "Error", message: err, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func on() {
+        LoadingOverlay.shared.showOverlay()
+        view.isUserInteractionEnabled = false
+    }
+    
+    private func off() {
+        LoadingOverlay.shared.hideOverlayView()
+        self.view.isUserInteractionEnabled = true
+    }
+    
+    private func loadData(_ sender: Any) {
+        self.on()
+        eventHandler?(.loadData)
+
+        model.getData() {
+            self.off()
+            self.mainView?.videoCollection?.reloadData()
+        } onFailure: {text in
+            self.showError(err: text)
+            self.off()
+        }
+    }
+    
+    
 }
 
 
