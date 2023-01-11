@@ -15,7 +15,6 @@ class TrendScreenCell: UICollectionViewCell {
     internal var model = TrendScreenModel()
     internal var videoImage: UIImageView = {
         let image = UIImageView()
-//        image.adjustsImageSizeForAccessibilityContentSizeCategory = true
         image.backgroundColor = .blue
         image.contentMode = .scaleAspectFill
         image.layer.frame.size = CGSize(width: 200, height: 190)
@@ -24,9 +23,9 @@ class TrendScreenCell: UICollectionViewCell {
     internal var videoName: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+        label.textColor = .gray
         label.numberOfLines = 2
-        label.backgroundColor = .gray
-        label.layer.frame.size = CGSize(width: 150, height: 43)
+        label.layer.frame.size = CGSize(width: 130, height: 43)
         label.adjustsFontSizeToFitWidth = true
         label.isUserInteractionEnabled = false
         return label
@@ -35,8 +34,8 @@ class TrendScreenCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.backgroundColor = .green
-        label.layer.frame.size = CGSize(width: 150, height: 17)
+        label.textColor = .gray
+        label.layer.frame.size = CGSize(width: 130, height: 17)
         label.adjustsFontSizeToFitWidth = true
         label.isUserInteractionEnabled = false
         return label
@@ -52,7 +51,6 @@ class TrendScreenCell: UICollectionViewCell {
         button.setTitle("", for: .normal)
         button.layer.frame.size = CGSize(width: 15, height: 15)
         button.tintColor = .gray
-//        button.backgroundColor = .black
         return button
     }()
     
@@ -79,28 +77,25 @@ class TrendScreenCell: UICollectionViewCell {
         
         videoName.pin
             .below(of: videoImage)
-            .after(of: userPhoto)
+            .left(35)
             .above(of: infoLabel)
             .right(15)
         
         infoLabel.pin
             .below(of: videoName)
-            .left(30)
+            .left(35)
             .right(15)
             .bottom()
         
         userPhoto.pin
             .below(of: videoImage)
             .left()
-            .bottom(30)
-            .before(of: videoName)
+            .bottom(28)
         
         videoSettings.pin
             .below(of: videoImage)
-            .right()
+            .right(5)
             .after(of: videoName)
             .bottom(45)
-        
-        self.backgroundColor = .brown
     }
 }
