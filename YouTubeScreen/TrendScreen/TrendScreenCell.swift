@@ -51,7 +51,8 @@ class TrendScreenCell: UICollectionViewCell {
         let button = UIButton()
         button.setTitle("", for: .normal)
         button.layer.frame.size = CGSize(width: 15, height: 15)
-        button.backgroundColor = .black
+        button.tintColor = .gray
+//        button.backgroundColor = .black
         return button
     }()
     
@@ -61,6 +62,7 @@ class TrendScreenCell: UICollectionViewCell {
         self.contentView.addSubview(userPhoto)
         self.contentView.addSubview(infoLabel)
         self.contentView.addSubview(videoSettings)
+        videoSettings.setImage(UIImage(systemName: "ellipsis"), for: .normal)
         userPhoto.image = UIImage(named: "1resized")
         guard let url = URL(string: data.link) else { return }
         videoImage.load(url: url)
