@@ -18,7 +18,7 @@ class TrendScreenCell: UICollectionViewCell {
 //        image.adjustsImageSizeForAccessibilityContentSizeCategory = true
         image.backgroundColor = .blue
         image.contentMode = .scaleAspectFill
-        image.layer.frame.size = CGSize(width: 150, height: 190)
+        image.layer.frame.size = CGSize(width: 200, height: 190)
         return image
     }()
     internal var videoName: UILabel = {
@@ -70,9 +70,9 @@ class TrendScreenCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         videoImage.pin
-            .top()
-            .left()
-            .right()
+            .top(pin.safeArea)
+            .left(pin.safeArea)
+            .right(pin.safeArea)
             .bottom(60)
         
         videoName.pin

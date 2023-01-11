@@ -42,7 +42,7 @@ final class ScreensCoordinator: Coordinator {
         self.navigationScreens.append(.trendScreen)
         self.navigationController.navigationBar.isHidden = true
         self.navigationController.pushViewController(contr, animated: true)
-        self.navigationController.setViewControllers([contr], animated: false) }
+        self.navigationController.setViewControllers([contr], animated: true) }
 }
 
 //MARK: -
