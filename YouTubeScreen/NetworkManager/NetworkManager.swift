@@ -22,7 +22,7 @@ class NetworkManager {
             switch response.result {
             case .success(let data):
                 completion(data.compactMap {
-                    return ImageData(user: $0.user.username ?? "", createdAt: $0.createdAt ?? "", altDescription: $0.altDescription ?? "", likes: $0.likes ?? 1, link: $0.links.html ?? "")
+                    return ImageData(user: $0.user.username ?? "cOoL gUy", createdAt: $0.createdAt ?? "01/01/01", altDescription: $0.altDescription ?? "This is my first video! Hope you enjoy it!", likes: $0.likes ?? 666, link: $0.links.html ?? "")
                 })
             case .failure(let error):
                 if response.data == nil {
