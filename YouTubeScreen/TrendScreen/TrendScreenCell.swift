@@ -7,7 +7,6 @@
 
 import UIKit
 import PinLayout
-import UnsplashPhotoPicker
 
 class TrendScreenCell: UICollectionViewCell {
     
@@ -16,8 +15,8 @@ class TrendScreenCell: UICollectionViewCell {
     internal var videoImage: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .blue
-        image.contentMode = .scaleAspectFill
-        image.layer.frame.size = CGSize(width: 200, height: 190)
+        image.contentMode = .scaleAspectFit
+        image.layer.frame.size = CGSize(width: 200, height: 170)
         return image
     }()
     internal var videoName: UILabel = {
@@ -54,6 +53,19 @@ class TrendScreenCell: UICollectionViewCell {
         return button
     }()
     
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//       fatalError("NOT IMPLEMENTED")
+//    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        self.contentView.addSubview(videoImage)
+//        self.contentView.addSubview(videoName)
+//        self.contentView.addSubview(userPhoto)
+//        self.contentView.addSubview(infoLabel)
+//        self.contentView.addSubview(videoSettings)
+//    }
+    
     public func setData(_ data: ImageData) {
         self.contentView.addSubview(videoImage)
         self.contentView.addSubview(videoName)
@@ -73,12 +85,10 @@ class TrendScreenCell: UICollectionViewCell {
             .top(pin.safeArea)
             .left(pin.safeArea)
             .right(pin.safeArea)
-            .bottom(60)
         
         videoName.pin
             .below(of: videoImage)
             .left(35)
-            .above(of: infoLabel)
             .right(15)
         
         infoLabel.pin
@@ -90,12 +100,10 @@ class TrendScreenCell: UICollectionViewCell {
         userPhoto.pin
             .below(of: videoImage)
             .left()
-            .bottom(28)
         
         videoSettings.pin
             .below(of: videoImage)
             .right(5)
             .after(of: videoName)
-            .bottom(45)
     }
 }

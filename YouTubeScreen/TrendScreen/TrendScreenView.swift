@@ -22,12 +22,13 @@ class TrendScreenView: UIView {
     
     private func videoCollectionSetup() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 250)
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
         
         
         videoCollection?.collectionViewLayout = layout
         videoCollection?.register(TrendScreenCell.self, forCellWithReuseIdentifier: cellId)
+        self.addSubview(videoCollection ?? UICollectionView())
     }
     
     private func videoCollectionConstreints() {

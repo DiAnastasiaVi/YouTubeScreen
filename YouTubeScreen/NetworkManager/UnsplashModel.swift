@@ -14,15 +14,15 @@ class UnsplashModel: Codable {
 struct UnsplashElement: Codable {
     let createdAt: String?
     let altDescription: String?
-    let links: UnsplashLinks
+    let urls: Urls
     let likes: Int?
     let user: User
     let views: Int?
 }
 
 // MARK: - UnsplashLinks
-struct UnsplashLinks: Codable {
-    let html: String?
+struct Urls: Codable {
+    let thumb: String?
 }
 
 // MARK: - User
