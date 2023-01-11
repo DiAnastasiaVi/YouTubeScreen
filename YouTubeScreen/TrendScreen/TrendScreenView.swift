@@ -35,6 +35,7 @@ class TrendScreenView: UIView {
         videoCollection?.collectionViewLayout = layout
         videoCollection?.register(TrendScreenCell.self, forCellWithReuseIdentifier: cellId)
         self.addSubview(videoCollection ?? UICollectionView())
+        videoCollection?.translatesAutoresizingMaskIntoConstraints = false
     }
 
     

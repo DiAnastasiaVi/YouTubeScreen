@@ -14,6 +14,7 @@ enum Sizes {
     static let infoLayerHeight: CGFloat = 17
     static let videoNameHeight: CGFloat = 43
     static let margin: CGFloat = 5
+    static let leftMargin: CGFloat = userPhotoSize + 15
 }
 
 class TrendScreenCell: UICollectionViewCell {
@@ -43,9 +44,10 @@ class TrendScreenCell: UICollectionViewCell {
         label.isUserInteractionEnabled = false
         return label
     }()
-    internal var userPhoto: UIImageView = {
-        let photo = UIImageView()
+    internal var userPhoto: UIButton = {
+        let photo = UIButton()
         photo.isUserInteractionEnabled = false
+        photo.contentScaleFactor = .greatestFiniteMagnitude
         return photo
     }()
     internal var videoSettings: UIButton = {
@@ -55,20 +57,6 @@ class TrendScreenCell: UICollectionViewCell {
         return button
     }()
 
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        self.contentView.addSubview(videoImage)
-//        self.contentView.addSubview(videoName)
-//        self.contentView.addSubview(userPhoto)
-//        self.contentView.addSubview(infoLabel)
-//        self.contentView.addSubview(videoSettings)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//        fatalError("init(coder:) has not been implemented")
-//    }
-    
     //MARK: -
     //MARK: Public Methods
     
@@ -79,15 +67,14 @@ class TrendScreenCell: UICollectionViewCell {
         self.contentView.addSubview(infoLabel)
         self.contentView.addSubview(videoSettings)
         videoSettings.setImage(UIImage(systemName: "ellipsis"), for: .normal)
-        userPhoto.image = UIImage(named: "1resized")
+        userPhoto.setImage(UIImage(named: "1resized"), for: .normal)
         guard let url = URL(string: data.link) else { return }
         videoImage.load(url: url)
         videoName.text = data.altDescription
         infoLabel.text = "\(data.user) * \(data.likes) likes * \(data.createdAt)"
     }
-    
+   
     public override func layoutSubviews() {
-        
         let width = safeAreaLayoutGuide.layoutFrame.width
         let height = safeAreaLayoutGuide.layoutFrame.height * 0.7
         
@@ -100,17 +87,19 @@ class TrendScreenCell: UICollectionViewCell {
         videoName.pin
             .below(of: videoImage)
             .before(of: videoSettings)
+            .left(Sizes.leftMargin)
         videoName.layer.frame.size = CGSize(width: width * 0.8, height: Sizes.videoNameHeight)
         
         infoLabel.pin
             .below(of: videoName)
             .before(of: videoSettings)
+            .left(Sizes.leftMargin)
             .bottom()
         infoLabel.layer.frame.size = CGSize(width: width * 0.8, height: Sizes.infoLayerHeight)
         
         userPhoto.pin
-            .below(of: videoImage)
-            .left(Sizes.margin)
+            .below(of: videoImage).margin(Sizes.margin)
+            .left()
         userPhoto.layer.frame.size = CGSize(width: Sizes.userPhotoSize, height: Sizes.userPhotoSize)
         
         videoSettings.pin
