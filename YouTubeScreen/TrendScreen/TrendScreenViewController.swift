@@ -42,7 +42,6 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
         print("Deinit: \(Self.self)")
     }
     
-    
     //MARK: -
     //MARK: Private Methods
     
@@ -65,7 +64,6 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
     private func loadData(_ sender: Any) {
         self.on()
         eventHandler?(.loadData)
-
         model.getData() {
             self.off()
             self.mainView?.videoCollection?.reloadData()
@@ -74,7 +72,6 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
             self.off()
         }
     }
-    
     
 }
 
