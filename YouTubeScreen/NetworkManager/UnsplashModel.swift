@@ -17,7 +17,6 @@ struct UnsplashElement: Codable {
     let urls: Urls
     let likes: Int?
     let user: User
-    let views: Int?
 }
 
 // MARK: - UnsplashLinks

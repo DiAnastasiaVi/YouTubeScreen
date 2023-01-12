@@ -22,8 +22,6 @@
 		5DB8FF3B296C2B620032D6EB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3A296C2B620032D6EB /* Coordinator.swift */; };
 		5DB8FF3D296C2B730032D6EB /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3C296C2B730032D6EB /* AppConfigurator.swift */; };
 		5DB8FF3F296C2B8A0032D6EB /* ScreensCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8FF3E296C2B8A0032D6EB /* ScreensCoordinator.swift */; };
-		5DD7EA69296EBDF200008449 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7EA68296EBDF200008449 /* LoadingOverlay.swift */; };
-		5DD7EA6B296EBE1900008449 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7EA6A296EBE1900008449 /* BlurLoader.swift */; };
 		5DD7EA6D296EC1F400008449 /* UnsplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD7EA6C296EC1F400008449 /* UnsplashModel.swift */; };
 		5DDBDC27296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */; };
 		5DDBDC29296CB25D00C80A41 /* TrendScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDBDC28296CB25D00C80A41 /* TrendScreenCell.swift */; };
@@ -49,8 +47,6 @@
 		5DB8FF3A296C2B620032D6EB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		5DB8FF3C296C2B730032D6EB /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		5DB8FF3E296C2B8A0032D6EB /* ScreensCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensCoordinator.swift; sourceTree = "<group>"; };
-		5DD7EA68296EBDF200008449 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
-		5DD7EA6A296EBE1900008449 /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		5DD7EA6C296EC1F400008449 /* UnsplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModel.swift; sourceTree = "<group>"; };
 		5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrandScreenViewControllerExtension.swift; sourceTree = "<group>"; };
 		5DDBDC28296CB25D00C80A41 /* TrendScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendScreenCell.swift; sourceTree = "<group>"; };
@@ -75,7 +71,6 @@
 			children = (
 				5D287F84296CEBC900B1E698 /* NetworkManager.swift */,
 				5DD7EA6C296EC1F400008449 /* UnsplashModel.swift */,
-				5D287F86296CEBFA00B1E698 /* TrendScreenModel.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -113,7 +108,6 @@
 				5DB8FF1E296C21850032D6EB /* SceneDelegate.swift */,
 				5D287F81296CEB7900B1E698 /* Error */,
 				5D287F80296CEB5F00B1E698 /* NetworkManager */,
-				5DD7EA67296EBDBB00008449 /* LoadingOverlay */,
 				5DB8FF37296C2A9D0032D6EB /* Coordinator */,
 				5DB8FF30296C293F0032D6EB /* TrendScreen */,
 				5DB8FF25296C21880032D6EB /* Assets.xcassets */,
@@ -127,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				5DB8FF31296C297E0032D6EB /* TrendScreen.storyboard */,
+				5D287F86296CEBFA00B1E698 /* TrendScreenModel.swift */,
 				5DB8FF33296C299A0032D6EB /* TrendScreenViewController.swift */,
 				5DDBDC26296C9C7900C80A41 /* TrandScreenViewControllerExtension.swift */,
 				5DB8FF35296C29B60032D6EB /* TrendScreenView.swift */,
@@ -145,15 +140,6 @@
 				5DB8FF3E296C2B8A0032D6EB /* ScreensCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		5DD7EA67296EBDBB00008449 /* LoadingOverlay */ = {
-			isa = PBXGroup;
-			children = (
-				5DD7EA68296EBDF200008449 /* LoadingOverlay.swift */,
-				5DD7EA6A296EBE1900008449 /* BlurLoader.swift */,
-			);
-			path = LoadingOverlay;
 			sourceTree = "<group>";
 		};
 		994ADF5714B724B2525B4087 /* Pods */ = {
@@ -296,9 +282,7 @@
 				5DD7EA6D296EC1F400008449 /* UnsplashModel.swift in Sources */,
 				5DB8FF39296C2B4F0032D6EB /* StoryboardLoadable.swift in Sources */,
 				5DB8FF3B296C2B620032D6EB /* Coordinator.swift in Sources */,
-				5DD7EA6B296EBE1900008449 /* BlurLoader.swift in Sources */,
 				5DB8FF1D296C21850032D6EB /* AppDelegate.swift in Sources */,
-				5DD7EA69296EBDF200008449 /* LoadingOverlay.swift in Sources */,
 				5D287F89296CEF8500B1E698 /* UIImageViewExtension.swift in Sources */,
 				5DB8FF1F296C21850032D6EB /* SceneDelegate.swift in Sources */,
 				5DDBDC29296CB25D00C80A41 /* TrendScreenCell.swift in Sources */,

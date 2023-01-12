@@ -51,25 +51,12 @@ class TrendScreenViewController: UIViewController, StoryboardLoadable {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func on() {
-        LoadingOverlay.shared.showOverlay()
-        view.isUserInteractionEnabled = false
-    }
-    
-    private func off() {
-        LoadingOverlay.shared.hideOverlayView()
-        self.view.isUserInteractionEnabled = true
-    }
-    
     private func loadData(_ sender: Any) {
-        self.on()
         eventHandler?(.loadData)
         model.getData() {
-            self.off()
             self.mainView?.videoCollection?.reloadData()
         } onFailure: {text in
             self.showError(err: text)
-            self.off()
         }
     }
     

@@ -8,16 +8,14 @@
 import UIKit
 import PinLayout
 
-enum Sizes {
-    static let userPhotoSize: CGFloat = 30
-    static let videoSettingsSize: CGFloat = 15
-    static let infoLayerHeight: CGFloat = 17
-    static let videoNameHeight: CGFloat = 43
-    static let margin: CGFloat = 5
-    static let leftMargin: CGFloat = userPhotoSize + 15
-}
-
 class TrendScreenCell: UICollectionViewCell {
+    
+    enum Sizes {
+        static let userPhotoSize: CGFloat = 30
+        static let videoSettingsSize: CGFloat = 15
+        static let margin: CGFloat = 7
+        static let leftMargin: CGFloat = userPhotoSize + 15
+    }
     
     //MARK: -
     //MARK: Properties
@@ -31,7 +29,7 @@ class TrendScreenCell: UICollectionViewCell {
     }()
     internal var videoName: UILabel = {
         let label = UILabel()
-        label.textColor = .gray
+        label.textColor = .white
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
         label.isUserInteractionEnabled = false
@@ -48,6 +46,8 @@ class TrendScreenCell: UICollectionViewCell {
         let photo = UIButton()
         photo.isUserInteractionEnabled = false
         photo.contentScaleFactor = .greatestFiniteMagnitude
+        photo.imageView?.contentMode = .scaleToFill
+        photo.contentMode = .center
         return photo
     }()
     internal var videoSettings: UIButton = {
@@ -76,26 +76,27 @@ class TrendScreenCell: UICollectionViewCell {
    
     public override func layoutSubviews() {
         let width = safeAreaLayoutGuide.layoutFrame.width
-        let height = safeAreaLayoutGuide.layoutFrame.height * 0.7
+        let height = safeAreaLayoutGuide.layoutFrame.height
+        let videoNameHeight = (height - videoImage.layer.frame.size.height) * 0.7
         
         videoImage.pin
             .top(pin.safeArea)
             .left(pin.safeArea)
             .right(pin.safeArea)
-        videoImage.layer.frame.size = CGSize(width: width, height: height)
+        videoImage.layer.frame.size = CGSize(width: width, height: width * 0.55)
         
         videoName.pin
             .below(of: videoImage)
             .before(of: videoSettings)
             .left(Sizes.leftMargin)
-        videoName.layer.frame.size = CGSize(width: width * 0.8, height: Sizes.videoNameHeight)
+        videoName.layer.frame.size = CGSize(width: width * 0.8, height: videoNameHeight)
         
         infoLabel.pin
             .below(of: videoName)
             .before(of: videoSettings)
             .left(Sizes.leftMargin)
             .bottom()
-        infoLabel.layer.frame.size = CGSize(width: width * 0.8, height: Sizes.infoLayerHeight)
+        infoLabel.layer.frame.size = CGSize(width: width * 0.8, height: height - videoImage.layer.frame.size.height - videoName.layer.frame.size.height)
         
         userPhoto.pin
             .below(of: videoImage).margin(Sizes.margin)
